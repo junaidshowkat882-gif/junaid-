@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Landslide Prediction System</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <h1>
+            🌍 Landslide Prediction System
+        </h1>
+
+        <p>
+            Northeast India
+        </p>
+
+    </header>
+
+
+
+    <!-- MAIN CONTAINER -->
+
+    <main class="container">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="map-section">
+
+            <h2>Select Location</h2>
+
+            <p>
+                Click anywhere on the map to select
+                a location.
+            </p>
+
+            <div id="map"></div>
+
+        </section>
+
+
+
+        <!-- RIGHT SIDE -->
+
+        <section class="dashboard">
+
+
+            <!-- LOCATION -->
+
+            <div class="panel">
+
+                <h2>📍 Selected Location</h2>
+
+
+                <div class="coordinates">
+
+                    <div class="coordinate">
+
+                        <span>Latitude</span>
+
+                        <strong id="latitude">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="coordinate">
+
+                        <span>Longitude</span>
+
+                        <strong id="longitude">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="predictButton"
+                    disabled
+                >
+
+                    Predict Landslide Risk
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ENVIRONMENTAL DATA -->
+
+            <div class="panel">
+
+                <h2>
+                    🌱 Environmental Data
+                </h2>
+
+
+                <div class="data-grid">
+
+
+                    <div class="data-card">
+
+                        <h3>🌧️ Rainfall</h3>
+
+                        <p id="rainfall">
+                            --
+                        </p>
+
+                    </div>
+
+
+                    <div class="data-card">
+
+                        <h3>⛰️ Elevation</h3>
+
+                        <p id="elevation">
+                            --
+                        </p>
+
+                    </div>
+
+
+                    <div class="data-card">
+
+                        <h3>📐 Slope</h3>
+
+                        <p id="slope">
+                            --
+                        </p>
+
+                    </div>
+
+
+                    <div class="data-card">
+
+                        <h3>🌿 Vegetation</h3>
+
+                        <p id="vegetation">
+                            --
+                        </p>
+
+                    </div>
+
+
+                    <div class="data-card">
+
+                        <h3>🌍 Soil</h3>
+
+                        <p id="soil">
+                            --
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RISK -->
+
+            <div class="risk-panel">
+
+                <h2>
+                    ⚠️ Landslide Risk
+                </h2>
+
+                <div id="risk">
+
+                    No Prediction
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Leaflet JavaScript -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+    <!-- Our JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
